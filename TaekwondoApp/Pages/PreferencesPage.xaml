@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TaekwondoApp.Pages.PreferencesPage"
+             Title="PreferencesPage">
+    <VerticalStackLayout>
+        <Grid RowDefinitions="*" ColumnDefinitions="Auto, *, Auto, Auto, Auto" Padding="40">
+
+            <Label
+                x:Name="categorieAgeLabel"
+                Text="Vous êtes adulte : "
+                Grid.Row="0"
+                Grid.Column="0"/>
+
+            <Label
+                Text="Mineur"
+                Grid.Row="0"
+                Grid.Column="2"/>
+
+            <Switch x:Name="ageSwitch" 
+                    IsToggled="False"
+                    Grid.Row="0"
+                    Grid.Column="3"
+                    VerticalOptions="Center"/>
+
+            <Label
+                Text="Mineur"
+                Grid.Row="0"
+                Grid.Column="4"/>
+            
+        </Grid>
+        
+        <Grid
+            RowDefinitions="*"
+            ColumnDefinitions="Auto, *, Auto"
+            Padding="40">
+
+            <Label
+                x:Name="gradeLabel"
+                Text="Votre grade : "
+                Grid.Column="0"/>
+
+            <Picker
+                x:Name="gradePicker"
+                Grid.Column="2"
+                Title="Sélectionner votre grade">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Blanche</x:String>
+                        <x:String>Jaune</x:String>
+                        <x:String>Jaune - 1 barrette bleue</x:String>
+                        <x:String>Jaune - 2 barrettes bleues</x:String>
+                        <x:String>Bleue</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+                
+            </Picker>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
